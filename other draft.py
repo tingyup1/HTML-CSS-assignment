@@ -1,7 +1,9 @@
-import math
-pi = 3.1415926535
-formatPI = ("value of PI: {:.2f}".format(math.pi))
-print(formatPI)
-radius = float(input("Enter the radius:"))
-areaCircle = math.pi * radius **2
-print(f"Are of circle areaCircle: {areaCircle:.2f}")
+x = int(input("How much cash you have?"))
+asw = input("Can I look your wallet(y/n)?")
+
+if(x>100000 and asw == 'y'):
+    print("You are rich")
+elif(x>10):
+        print("You have more than 10 euros")
+else:
+    print("You are poor")
