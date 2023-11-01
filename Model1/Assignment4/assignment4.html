@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Draw a room</title>
 </head>
 <body>
+    <p>Enter your name to be drawn into a room:</p>
+    <input type="text" id="studentName">
+    <button onclick="sortStudent()">Sort</button>
+    <p id="result"></p>
 
+    <script>
+        function sortStudent() {
+            const studentName = document.getElementById("studentName").value;
+            const randomNumber = Math.floor(Math.random() * 4) + 1;
+            let room
+            switch (randomNumber){
+                case 1:
+                    room= "Gryffindor";
+                    break;
+                case 2:
+                    room = "Slytherin";
+                    break;
+                case 3:
+                    room = "Hufflepuff";
+                    break;
+                case 4:
+                    room = "Ravenclaw";
+                    break;
+            }
+            const resultElement=document.getElementById('result');
+            resultElement.textContent=`${studentName} in ${room}`;
+        }
+    </script>
 </body>
 </html>
