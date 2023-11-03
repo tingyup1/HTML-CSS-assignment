@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roll Dice game</title>
+</head>
+<body>
+ <script>
+     function rollDice(numDice){
+         let sum=0;
+         for(i=0;i<numDice;i++){
+             const rollRusult=(Math.floor(Math.random()*6)+1);
+             sum+=rollRusult
+         }
+        document.write('The result is '+sum)
+
+     }
+     const numDice=parseInt(prompt('Enter the dice number what you want to roll:'))
+     if(numDice>0){
+         rollDice(numDice)
+     }else {
+         console.log('Please enter a valid number.')
+     }
+ </script>
+</body>
+</html>
