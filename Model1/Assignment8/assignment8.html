@@ -12,9 +12,9 @@
 
    for (let year=startYear;year<=endYear;year++){
      if ((year%4===0 && year%100!==0)|| year%400===0){
-       const listYear=document.createElement('li');
-       listYear.textContent=year;
-       leapYearList.appendChild(listYear);
+       const yearList=document.createElement('li');
+       yearList.textContent=year;
+       leapYearList.appendChild(yearList);
      }
    }
    document.body.appendChild(leapYearList);
