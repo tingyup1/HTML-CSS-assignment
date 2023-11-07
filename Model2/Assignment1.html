@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<script>
+    const numbers=[];
+    for(let n=1; n<=5; n++){
+        num=parseInt(prompt(`Enter number ${n}`));
+        numbers.push(num);
+    }
+    console.log('Order numbers:')
+    for(let n=numbers.length-1; n>=0 ; n--){
+        console.log(numbers[n])
+    }
+</script>
+
+</body>
+</html>
