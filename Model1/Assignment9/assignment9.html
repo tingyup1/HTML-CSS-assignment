@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Number</title>
+</head>
+<body>
+<p>This is a prime number calculator</p>
+<input type="number" id="number">
+<button onclick="calculatePrimeNum()">calculate</button>
+<p id="result"></p>
+
+<script>
+    function calculatePrimeNum(){
+        const userInputNum=parseInt(document.getElementById('number').value);
+        let isPrime = true;
+
+            for (let i = 2; i < userInputNum; i++) {
+                if (userInputNum % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        if(isPrime){
+            resultElement=document.getElementById('result')
+            resultElement.textContent=userInputNum +'is a prime number'
+        }else{
+            resultElement=document.getElementById('result')
+            resultElement.textContent=userInputNum +'is not a prime number'
+        }
+
+    }
+</script>
+
+</body>
+</html>
