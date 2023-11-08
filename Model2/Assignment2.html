@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort</title>
+</head>
+<body>
+
+<script>
+  var participateCount=parseInt(prompt('The number of participants:'));
+  var participants=[];
+  for(i=1; i<=participateCount; i++){
+    var name=prompt('What is your name?'+'No.'+i);
+    participants.push(name);
+  }
+  participants.sort()
+
+     var ol=document.createElement('ol');
+
+     for(var i=0; i<participants.length; i++){
+        var li=document.createElement('li');
+        li.textContent=participants[i];
+        ol.appendChild(li);
+     }
+   document.body.appendChild(ol)
+
+</script>
+</body>
+</html>
