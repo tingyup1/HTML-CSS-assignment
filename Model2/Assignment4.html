@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort number</title>
+</head>
+<body>
+<script>
+    var numbers=[];
+    do {
+        var userInputNum=parseInt(prompt('Enter a number'));
+        numbers.push(userInputNum);
+    }while (userInputNum !==0);
+
+    numbers.sort(function (a,b) {return(b-a)});
+    console.log(numbers);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const numbers=[];
+  while (true) {
+    var userInput = parseInt(prompt('Enter a number'));
+
+    if(numbers.includes(userInput)){
+      console.log("Number already entered. Stopping.");
+      break;
+    }
+    numbers.push(userInput);
+  }
+
+  numbers.sort(function (a,b) {return(a-b)});
+  console.log('Ascending order:'+numbers);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print Dog's Name</title>
+</head>
+<body>
+<script>
+
+   var dogs=[] ;
+   for (i=1; i<=6; i++){
+       var dogName=prompt('Enter the name of dog'+[i]);
+       dogs.push(dogName);
+   }
+   dogs.reverse();
+   var ul=document.createElement('ul');
+   for (i=0; i<dogs.length; i++){
+       var li=document.createElement('li');
+       li.textContent=dogs[i];
+       ul.appendChild(li);
+   }
+   document.body.appendChild(ul);
+
+</script>
+
+</body>
+</html>
