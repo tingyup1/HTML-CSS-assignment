@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roll Dice</title>
+</head>
+<body>
+<script>
+    function rollDice(){
+        num=Math.floor(Math.random()*6)+1;
+        return num
+    }
+    var numbers=[];
+    while (true){
+       result= rollDice();
+        numbers.push(result);
+       if (result === 6){
+           break;
+       }
+    }
+    const ul=document.createElement('ul');
+    for(i=0; i<numbers.length; i++){
+        var li=document.createElement('li');
+        li.textContent=numbers[i];
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+
+
+
+</script>
+</body>
+</html>

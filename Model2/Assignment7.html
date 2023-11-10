@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>roll dice</title>
+</head>
+<body>
+<script>
+    function rollDice(faces){
+        num=Math.floor(Math.random()*faces)+1;
+        return num;
+    }
+    var maxFaces=parseInt(prompt('How many faces does your DICE have?'));
+    var numbers=[];
+    while (true){
+        result=rollDice(maxFaces);
+        numbers.push(result);
+        if (result === maxFaces){
+            break;
+        }
+       var ul=document.createElement('ul');
+        for(i=0; i<numbers.length; i++){
+            var li=document.createElement('li');
+            li.textContent=numbers[i];
+            ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+    }
+
+</script>
+</body>
+</html>
