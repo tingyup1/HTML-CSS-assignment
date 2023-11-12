@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even number</title>
+</head>
+<body>
+<script>
+      function even(originalArray){
+          var evenArray=[];
+          for(i=0; i<originalArray.length; i++){
+              if(originalArray[i] % 2 === 0){
+                  evenArray.push(originalArray[i]);
+              }
+          }
+         return evenArray
+      }
+      const originalArray=[2,4,7];
+      const resultArray=even(originalArray);
+      console.log('Original array:'+originalArray)
+      console.log('Even array:'+resultArray)
+
+</script>
+
+</body>
+</html>
