@@ -10,14 +10,15 @@
         num=Math.floor(Math.random()*faces)+1;
         return num;
     }
-    var maxFaces=parseInt(prompt('How many faces does your DICE have?'));
+    var faces=parseInt(prompt('How many faces does your DICE have?'));
     var numbers=[];
-    while (true){
-        result=rollDice(maxFaces);
+    while (true) {
+        result = rollDice(faces);
         numbers.push(result);
-        if (result === maxFaces){
+        if (result === faces) {
             break;
         }
+    }
        var ul=document.createElement('ul');
         for(i=0; i<numbers.length; i++){
             var li=document.createElement('li');
@@ -25,7 +26,7 @@
             ul.appendChild(li);
         }
         document.body.appendChild(ul);
-    }
+
 
 </script>
 </body>
