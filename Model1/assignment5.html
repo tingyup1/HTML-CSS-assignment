@@ -6,23 +6,23 @@
 </head>
 <body>
 <h1>Leap year calculator</h1>
-<p>Enter a year:</p>
-<input type="number" id="yearInput">
-<button onclick="calculation()">Check</button>
-<p id="result"></p>
+<label for="userInputYear">Enter a year:</label>
+<input type="number" id="userInputYear">
+<button onclick="check()">check</button>
+<div id="result">---Your result will put here---</div>
 
-    <script>
-        function calculation() {
-            const year = parseInt(document.getElementById('yearInput').value);
-            const resultElement = document.getElementById('result');
-
-            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-                resultElement.textContent = year + " is a leap year.";
-            } else {
-                resultElement.textContent = year + " is not a leap year.";
-            }
+<script>
+    function check(){
+        var year=parseInt(document.getElementById('userInputYear').value);
+        var resultElement=document.getElementById('result');
+        if ((year % 4 ===0 && year % 100 !== 0) || year % 400 === 0){
+            resultElement.textContent = `${year} is a leap year.`
+        }else {
+            resultElement.textContent = `${year} is not a leap year.`
         }
-    </script>
+    }
+</script>
+
 
 </body>
 </html>
