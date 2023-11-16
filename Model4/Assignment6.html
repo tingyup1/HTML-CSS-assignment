@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="searchForm">
+        <label for="searchTerm">Enter Search Term:</label>
+        <input type="text" id="searchTerm" required>
+        <button type="button" onclick="searchJokes()">Search</button>
+    </form>
+
+    <div id="jokeContainer"></div>
+
+    <script>
+        function searchJokes() {
+            const searchTerm = document.getElementById('searchTerm').value;
+            const jokeContainer = document.getElementById('jokeContainer');
+
+
+            fetch(`https://api.chucknorris.io/jokes/search?query=${searchTerm}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result.length > 0) {
+                        data.result.forEach(joke => {
+                            const jokeArticle = document.createElement('article');
+                            const jokeParagraph = document.createElement('p');
+                            jokeParagraph.textContent = joke.value;
+                            jokeArticle.appendChild(jokeParagraph);
+                            jokeContainer.appendChild(jokeArticle);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching Chuck Norris jokes:', error);
+                });
+        }
+    </script>
+</body>
+</html>
